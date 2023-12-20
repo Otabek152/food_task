@@ -170,9 +170,6 @@ class _AddPageBodyState extends State<AddPageBody> {
               onChanged: ((double value) {
                 setState(() {
                   valueslide = value;
-                  if(valueslide == null && valueslide == 0.0){
-                    valueslide = 10.0;
-                  }
                   model.value = valueslide;
                 });
               }),

@@ -16,7 +16,7 @@ class AddProvider extends ChangeNotifier {
             foodDescription:
                 foodDescription.text.isNotEmpty ? foodDescription.text : "Null",
             foodImage: image,
-            value: value))
+            value: value == null || value == 0 ? 10.0 : value))
         .then((value) => clearFood());
   }
 
