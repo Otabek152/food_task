@@ -14,6 +14,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   Hive.registerAdapter(HiveAddAdapter());
+  await Hive.deleteBoxFromDisk('foods');
   await Hive.openBox<HiveAdd>('foods');
   
   runApp(const MainApp());
